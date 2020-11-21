@@ -65,6 +65,11 @@ jobs:
           . x_assemble_artifact.sh
           release_tag="R2S-Lean-$(date +%Y-%m-%d)"
           echo "##[set-output name=release_tag;]$release_tag"
+      - name: Upload ROM
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ steps.assemble_artifact.outputs.release_tag }}-ROM.zip
+          path: ./artifact.zip
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

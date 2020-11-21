@@ -1,13 +1,9 @@
 name: r2s Lean版openwrt
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - '.github/workflows/r2s_lean.yml'
   workflow_dispatch:
   schedule:
-    - cron: '00 07 * * *'
+    - cron: '10 07 * * *'
 
 jobs:
 

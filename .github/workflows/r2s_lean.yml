@@ -5,8 +5,9 @@ on:
     branches: [ master ]
     paths:
       - '.github/workflows/r2s_lean.yml'
-  schedule:
-    - cron: '00 07 * * *'
+  workflow_dispatch:
+#  schedule:
+#    - cron: '00 07 * * *'
 
 jobs:
 

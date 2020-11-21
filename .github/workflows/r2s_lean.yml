@@ -5,8 +5,15 @@ on:
     branches: [ master ]
     paths:
       - '.github/workflows/r2s_lean.yml'
-  schedule:
-    - cron: '10 09 * * *'
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+#  schedule:
+#    - cron: '10 09 * * *'
 
 jobs:
 
